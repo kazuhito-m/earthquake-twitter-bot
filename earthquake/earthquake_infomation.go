@@ -2,7 +2,6 @@ package earthquake
 
 import (
 	"encoding/json"
-	"log"
 )
 
 type EarthquakeInformation struct {
@@ -18,9 +17,6 @@ type EarthquakeResult struct {
 func ParseJsonOf(jsonText string) EarthquakeInformation {
 	var info EarthquakeInformation
 	jsonBytes := []byte(jsonText)
-	err := json.Unmarshal(jsonBytes, &info)
-	if err != nil {
-		log.Fatal(err)
-	}
+	json.Unmarshal(jsonBytes, &info)
 	return info
 }
