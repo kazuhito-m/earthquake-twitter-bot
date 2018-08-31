@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 )
 
-type EarthquakeInformation struct {
+type EarthquakeReport struct {
 	Result EarthquakeResult
 	Report_Id string
 }
@@ -14,8 +14,8 @@ type EarthquakeResult struct {
 	Message  string
 }
 
-func ParseJsonOf(jsonText string) EarthquakeInformation {
-	var info EarthquakeInformation
+func ParseJsonOf(jsonText string) EarthquakeReport {
+	var info EarthquakeReport
 	jsonBytes := []byte(jsonText)
 	json.Unmarshal(jsonBytes, &info)
 	return info

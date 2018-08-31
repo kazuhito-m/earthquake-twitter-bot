@@ -12,12 +12,6 @@ func createTestFilePath(fileName string) string {
 	return path.Join(testDirPath, fileName)
 }
 
-func assertSettingFileValue(actual string, expect string, t *testing.T) {
-	if actual != expect {
-		t.Errorf("設定ファイルの値が異なります。結果:%v,期待:%v", actual, expect)
-	}
-}
-
 func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 	testFilePath := createTestFilePath("testSettings.tml")
 
@@ -29,3 +23,12 @@ func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 	assertSettingFileValue(ts.AccessToken, "at", t)
 	assertSettingFileValue(ts.AccessTokenSecret, "ats", t)
 }
+
+// utility functions
+
+func assertSettingFileValue(actual string, expect string, t *testing.T) {
+	if actual != expect {
+		t.Errorf("設定ファイルの値が異なります。結果:%v,期待:%v", actual, expect)
+	}
+}
+

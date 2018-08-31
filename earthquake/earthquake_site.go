@@ -21,7 +21,7 @@ func createUrl() string {
 	return strings.Replace(SITE_URL_TEMPLATE, "{time_id}", CreateTimeId(), 1)
 }
 
-func (site Site) GetNowEarthquakeAnalyze() EarthquakeInformation {
+func (site Site) GetNowEarthquakeAnalyze() EarthquakeReport {
 	url := createUrl()
 	jsonText := site.client.Get(url)
 	return ParseJsonOf(jsonText)

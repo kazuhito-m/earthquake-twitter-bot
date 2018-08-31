@@ -48,6 +48,8 @@ func Test期待以外の文字列が来た場合はステータス部分がか�
 	}
 }
 
+// utility functions
+
 func assertParseByFormat(dateTimeText string, format string) bool {
 	loc, _ := time.LoadLocation("Asia/Tokyo")
 	_, error := time.ParseInLocation(format, dateTimeText, loc)
