@@ -3,3 +3,6 @@ consumerKey       = ""
 consumerSecret    = ""
 accessToken       = ""
 accessTokenSecret = ""
+
+[bot]
+intervalSecond = 3

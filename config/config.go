@@ -6,6 +6,7 @@ import (
 
 type Settings struct {
 	Twitter TwitterSettings
+	Bot BotSetting
 }
 
 type TwitterSettings struct {
@@ -13,6 +14,10 @@ type TwitterSettings struct {
 	ConsumerSecret string
 	AccessToken string
 	AccessTokenSecret string
+}
+
+type BotSetting struct {
+	IntervalSecond int
 }
 
 func LoadSettings(filePath string) Settings {

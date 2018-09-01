@@ -3,3 +3,6 @@ consumerKey       = "ck"
 consumerSecret    = "cs"
 accessToken       = "at"
 accessTokenSecret = "ats"
+
+[bot]
+intervalSecond = 999
