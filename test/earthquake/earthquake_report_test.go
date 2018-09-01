@@ -9,7 +9,7 @@ import (
 )
 
 func Test地震データのJSONテキストを構造体に変換出来る(t *testing.T) {
-	jsonText := loadTestJson("testEarthquakeInformation.json")
+	jsonText := loadTestJson("testEarthquakeReport.json")
 
 	actual := earthquake.ParseJsonOf(jsonText)
 
@@ -26,8 +26,24 @@ func Testカタチが合わないテキストを送り込んだ場合にはStatu
 
 	result := actual.Result
 	assertJsonValue(result.Status, "", t)
-
 }
+
+func Test地震データが存在する場合を判定出来る(t *testing.T) {
+	sut := earthquake.EarthquakeReport{}
+	sut.Result.Message = ""
+	if sut.Exists() == false {
+		t.Errorf("「地震データが存在する」判定が「存在しない」結果を返した。")
+	}
+}
+
+func Test地震データが存在しない場合を判定出来る(t *testing.T) {
+	sut := earthquake.EarthquakeReport{}
+	sut.Result.Message = "データがありません"
+	if sut.Exists() == true {
+		t.Errorf("「地震データが存在しない」判定が「存在する」結果を返した。")
+	}
+}
+
 
 // utility functions
 

@@ -20,3 +20,7 @@ func ParseJsonOf(jsonText string) EarthquakeReport {
 	json.Unmarshal(jsonBytes, &info)
 	return info
 }
+
+func (report EarthquakeReport) Exists() bool {
+	return report.Result.Message != "データがありません"
+}
