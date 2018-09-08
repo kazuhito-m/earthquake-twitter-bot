@@ -44,6 +44,18 @@ func Test地震データが存在しない場合を判定出来る(t *testing.T)
 	}
 }
 
+func Test地震データが同じか否かをは判定出来る(t *testing.T) {
+	base := earthquake.EarthquakeReport{Report_Id: "同一レポート番号"}
+	same := earthquake.EarthquakeReport{Report_Id: "同一レポート番号"}
+	if !base.Same(same) {
+		t.Errorf("「地震データが同一か」判定が「同一でない」結果を返した。")
+	}
+
+	other := earthquake.EarthquakeReport{Report_Id: "全く違うレポート番号"}
+	if base.Same(other) {
+		t.Errorf("「地震データが同一じゃない」判定が「同一」結果を返した。")
+	}
+}
 
 // utility functions
 
