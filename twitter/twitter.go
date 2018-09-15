@@ -1,10 +1,9 @@
 package twitter
 
 import (
-	"fmt"
 	"github.com/ChimeraCoder/anaconda"
 	"github.com/kazuhito-m/earthquake-twitter-bot/config"
-	"net/url"
+	"log"
 )
 
 type Twitter struct {
@@ -23,11 +22,14 @@ func createTwitterApi(s config.TwitterSettings) *anaconda.TwitterApi {
 }
 
 func (t Twitter) Tweet(content string) {
-	api := t.twitterApi
-	v := url.Values{}
-	_, err := api.PostTweet(content, v)
-	if err == nil {
-		return
-	}
-	fmt.Println(err)
+	//api := t.twitterApi
+	//v := url.Values{}
+	//_, err := api.PostTweet(content, v)
+	//if err == nil {
+	//	return
+	//}
+
+	// TODO このダミー実装の削除
+	log.Println("Tweet()メソッドが呼ばれました。")
+	log.Println(content)
 }
