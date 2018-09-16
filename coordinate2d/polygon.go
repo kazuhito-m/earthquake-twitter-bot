@@ -4,6 +4,11 @@ type Polygon struct {
 	Points []Point
 }
 
+/*
+ 指定された座標が、自身が保持する「多角形」の「内側にあるか」を判定し、真偽値で帰す。
+ 参考: http://www.not-enough.org/abe/manual/argo/poly-naibu.html
+ 上記サイトのものをそのまま流用したので、意味は分かっていない。
+ */
 func (p Polygon) InsideOf(target Point) bool {
 	points := p.Points
 	inside := false
