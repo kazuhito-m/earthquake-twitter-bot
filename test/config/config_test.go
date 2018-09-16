@@ -17,14 +17,14 @@ func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 
 	result := config.LoadSettings(testFilePath)
 
+	bs := result.Bot
+	assertSettingFileNumber(bs.IntervalSecond, 999, t)
+	assertSettingFileNumber(bs.FrequentThresholdHour, 666, t)
 	ts := result.Twitter
 	assertSettingFileValue(ts.ConsumerKey, "ck", t)
 	assertSettingFileValue(ts.ConsumerSecret, "cs", t)
 	assertSettingFileValue(ts.AccessToken, "at", t)
 	assertSettingFileValue(ts.AccessTokenSecret, "ats", t)
-	bs := result.Bot
-	assertSettingFileNumber(bs.IntervalSecond, 999, t)
-	assertSettingFileNumber(bs.FrequentThresholdHour, 666, t)
 }
 
 // utility functions
