@@ -5,19 +5,19 @@ type Polygon struct {
 }
 
 func (p Polygon) InsideOf(target Point) bool {
-	poly := p.Points
-	var j int
-	count := 0
+	points := p.Points
+	inside := false
 	var cp Point
-	for i, _ := range poly {
-		j = (i + 1) % len(poly);
-		if cross(target.Y, poly[i], poly[j], &cp) {
-			if cp.X > target.X {
-				count++
-			}
+	for i, nowPoint := range points {
+		previousPoint := previousPoint(i, points)
+		if !cross(target.Y, nowPoint, previousPoint, &cp) {
+			continue
+		}
+		if cp.X > target.X {
+			inside = !inside
 		}
 	}
-	return count%2 != 0;
+	return inside;
 }
 
 func cross(y float64, p1 Point, p2 Point, cp *Point) bool {
@@ -28,7 +28,12 @@ func cross(y float64, p1 Point, p2 Point, cp *Point) bool {
 	}
 	cp.X = (p1.X*(p2.Y-y) + p2.X*(y-p1.Y)) / (p2.Y - p1.Y);
 	cp.Y = y;
-	return (p1.Y <= y && y < p2.Y)
+	return p1.Y <= y && y < p2.Y
+}
+
+func previousPoint(index int, points []Point) Point {
+	previousIndex := (index + 1) % len(points)
+	return points[previousIndex]
 }
 
 func CreatePolygon(pointArray [][2] float64) Polygon {
