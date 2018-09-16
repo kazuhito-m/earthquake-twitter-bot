@@ -116,6 +116,21 @@ func Test単純な0_3をちょっと超えるくらいで描くの八角形の�
 	assertInsideOnSquare(4, 3, false, sut, t)
 }
 
+func Test論理演算でXORを検査することが出来る(t *testing.T) {
+	xorPattern := [4][3]bool{
+		{true, true, false},
+		{true, false, true},
+		{false, true, true},
+		{false, false, false},
+	}
+	for _, v := range xorPattern {
+		actual := coordinate2d.Xor(v[0], v[1])
+		if (actual != v[2]) {
+			t.Errorf("XORが期待通りの値に鳴らない。%v ^ %v = %v", v[0], v[1], v[2])
+		}
+	}
+}
+
 // Utility functions
 
 func assertInsideOnSquare(X float64, Y float64, expect bool, sut coordinate2d.Polygon, t *testing.T) {

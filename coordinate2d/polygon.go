@@ -30,6 +30,10 @@ func previousPoint(index int, points []Point) Point {
 	return points[previousIndex]
 }
 
+func Xor(p bool, q bool) bool {
+	return p != q
+}
+
 func CreatePolygon(pointArray [][2] float64) Polygon {
 	count := len(pointArray)
 	points := make([]Point, count)
