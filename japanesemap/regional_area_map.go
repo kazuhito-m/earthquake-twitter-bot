@@ -96,7 +96,7 @@ func createAreas() []RegionalArea {
 			}),
 		},
 		RegionalArea{
-			"九州",
+			"沖縄",
 			coordinate2d.CreatePolygon([][2]float64{
 				{34.07985, 119.44924},
 				{26.44178, 120.0425},
