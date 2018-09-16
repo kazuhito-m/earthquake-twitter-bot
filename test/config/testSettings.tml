@@ -6,3 +6,4 @@ accessTokenSecret = "ats"
 
 [bot]
 intervalSecond = 999
+frequentThresholdHour = 666

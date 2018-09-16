@@ -24,7 +24,7 @@ func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 	assertSettingFileValue(ts.AccessTokenSecret, "ats", t)
 	bs := result.Bot
 	assertSettingFileNumber(bs.IntervalSecond, 999, t)
-	assertSettingFileNumber(bs.FrequentThresholdHour, 6, t)
+	assertSettingFileNumber(bs.FrequentThresholdHour, 666, t)
 }
 
 // utility functions
