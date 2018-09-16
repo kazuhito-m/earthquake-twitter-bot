@@ -10,7 +10,8 @@ func (p Polygon) InsideOf(target Point) bool {
 	var cp Point
 	for i, nowPoint := range points {
 		previousPoint := previousPoint(i, points)
-		if !cross(target.Y, nowPoint, previousPoint, &cp) {
+		line := Line{nowPoint, previousPoint}
+		if !cross(target.Y, line, &cp) {
 			continue
 		}
 		if cp.X > target.X {
@@ -20,12 +21,9 @@ func (p Polygon) InsideOf(target Point) bool {
 	return inside;
 }
 
-func cross(y float64, p1 Point, p2 Point, cp *Point) bool {
-	if p1.Y > p2.Y {
-		p := p1
-		p1 = p2
-		p2 = p
-	}
+func cross(y float64, line Line, cp *Point) bool {
+	p1 := line.First()
+	p2 := line.Last()
 	cp.X = (p1.X*(p2.Y-y) + p2.X*(y-p1.Y)) / (p2.Y - p1.Y);
 	cp.Y = y;
 	return p1.Y <= y && y < p2.Y
