@@ -33,7 +33,7 @@ func Test47都道府県名から地域名が割り出すことが出来る(t *te
 	sut := japanesemap.CreateRegionalClassifications()
 
 	assertGetRegionName("大阪府", "近畿", sut, t)
-	assertGetRegionName("沖縄県", "九州", sut, t)
+	assertGetRegionName("沖縄県", "沖縄", sut, t)
 }
 
 // Utility functions
