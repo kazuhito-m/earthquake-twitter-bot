@@ -8,8 +8,28 @@ import (
 	"testing"
 )
 
-func Test地震データのJSONテキストを構造体に変換出来る(t *testing.T) {
-	jsonText := loadTestJson("testEarthquakeReport.json")
+func Test地震発生時の地震データJSONテキストを構造体に変換出来る(t *testing.T) {
+	jsonText := loadTestJson("testEarthquakeReportRise.json")
+
+	actual := earthquake.ParseJsonOf(jsonText)
+
+	result := actual.Result
+	assertJsonValue(result.Status, "success", t)
+	assertJsonValue(result.Message, "", t)
+	assertJsonValue(actual.Report_Id, "20180916115045", t)
+
+	assertJsonValue(actual.Region_Name, "十勝地方南部", t)
+	assertJsonValue(actual.Report_Time, "2018/09/16 11:51:37", t)
+	assertJsonFloat(actual.LatitudeF64(), 42.6, t)
+	assertJsonFloat(actual.LongitudeF64(), 143.5, t)
+	assertJsonFloat(actual.MagunitudeF64(), 3.6, t)
+	assertJsonInt(actual.Sindo(), 2, t)
+
+	assertJsonValue(actual.Request_Time, "20180916115437", t)
+}
+
+func Test空データ時の地震データJSONテキストを構造体に変換出来る(t *testing.T) {
+	jsonText := loadTestJson("testEarthquakeReportEmpty.json")
 
 	actual := earthquake.ParseJsonOf(jsonText)
 
@@ -71,6 +91,18 @@ func loadTestJson(fileName string) string {
 }
 
 func assertJsonValue(actual string, expect string, t *testing.T) {
+	if actual != expect {
+		t.Errorf("JSON読み取り結果の値が異なります。結果:'%v',期待:'%v'", actual, expect)
+	}
+}
+
+func assertJsonFloat(actual float64, expect float64, t *testing.T) {
+	if actual != expect {
+		t.Errorf("JSON読み取り結果の値が異なります。結果:'%v',期待:'%v'", actual, expect)
+	}
+}
+
+func assertJsonInt(actual int, expect int, t *testing.T) {
 	if actual != expect {
 		t.Errorf("JSON読み取り結果の値が異なります。結果:'%v',期待:'%v'", actual, expect)
 	}

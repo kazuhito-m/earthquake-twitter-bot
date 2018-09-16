@@ -1,0 +1,28 @@
+{
+  "result": {
+    "status": "success",
+    "message": "",
+    "is_auth": true
+  },
+  "report_time": "2018/09/16 11:51:37",
+  "region_code": "",
+  "request_time": "20180916115437",
+  "region_name": "十勝地方南部",
+  "longitude": "143.5",
+  "is_cancel": false,
+  "depth": "60km",
+  "calcintensity": "2",
+  "is_final": true,
+  "is_training": false,
+  "latitude": "42.6",
+  "origin_time": "20180916115036",
+  "security": {
+    "realm": "/kyoshin_monitor/static/jsondata/eew_est/",
+    "hash": "b61e4d95a8c42e004665825c098a6de4"
+  },
+  "magunitude": "3.6",
+  "report_num": "5",
+  "request_hypo_type": "eew",
+  "report_id": "20180916115045",
+  "alertflg": "予報"
+}
