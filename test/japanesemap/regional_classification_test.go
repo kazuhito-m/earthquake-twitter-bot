@@ -28,3 +28,19 @@ func Test47都道府県の要素が詰まったオブジェクトを取得する
 		t.Errorf("都道府県に期待したものがなkった。大阪がありませんでした。")
 	}
 }
+
+func Test47都道府県名から地域名が割り出すことが出来る(t *testing.T) {
+	sut := japanesemap.CreateRegionalClassifications()
+
+	assertGetRegionName("大阪府", "近畿", sut, t)
+	assertGetRegionName("沖縄県", "九州", sut, t)
+}
+
+// Utility functions
+
+func assertGetRegionName(prefectureName string, expect string, sut japanesemap.RegionalClassifications, t *testing.T) {
+	actual := sut.GetRegionName(prefectureName)
+	if actual != expect {
+		t.Errorf("都道府県に対し、期待した地域名が違います。結果:%v,期待:%v", actual, expect)
+	}
+}
