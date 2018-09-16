@@ -10,9 +10,7 @@ func (p Polygon) InsideOf(target Point) bool {
 	for i, nowPoint := range points {
 		previousPoint := previousPoint(i, points)
 		line := Line{nowPoint, previousPoint}
-		if isCross(line, target) {
-			inside = !inside
-		}
+		inside = Xor(inside, isCross(line, target))
 	}
 	return inside;
 }
