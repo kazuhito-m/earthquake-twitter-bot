@@ -62,10 +62,10 @@ func createAreas() []RegionalArea {
 		RegionalArea{
 			"関西",
 			coordinate2d.CreatePolygon([][2]float64{
+				{40.56919, 129.25039},
+				{41.49734, 130.04797},
 				{26.29323, 142.82949},
 				{25.0322, 140.72012},
-				{26.29323, 142.82949},
-				{41.49734, 130.04797},
 			}),
 		},
 		RegionalArea{
