@@ -1,9 +1,9 @@
+[bot]
+intervalSecond        = 999
+frequentThresholdHour = 666
+
 [twitter]
 consumerKey       = "ck"
 consumerSecret    = "cs"
 accessToken       = "at"
 accessTokenSecret = "ats"
-
-[bot]
-intervalSecond = 999
-frequentThresholdHour = 666

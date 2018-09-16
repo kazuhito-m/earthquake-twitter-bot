@@ -13,7 +13,7 @@ func createTestFilePath(fileName string) string {
 }
 
 func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
-	testFilePath := createTestFilePath("testSettings.tml")
+	testFilePath := createTestFilePath("testSettings.toml")
 
 	result := config.LoadSettings(testFilePath)
 
