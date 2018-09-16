@@ -18,6 +18,7 @@ type TwitterSettings struct {
 
 type BotSetting struct {
 	IntervalSecond int
+	FrequentThresholdHour int
 }
 
 func LoadSettings(filePath string) Settings {

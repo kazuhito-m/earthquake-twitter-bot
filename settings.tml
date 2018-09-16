@@ -6,3 +6,6 @@ accessTokenSecret = ""
 
 [bot]
 intervalSecond = 3
+frequentThresholdHour = 6
+
+

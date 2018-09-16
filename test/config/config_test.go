@@ -24,6 +24,7 @@ func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 	assertSettingFileValue(ts.AccessTokenSecret, "ats", t)
 	bs := result.Bot
 	assertSettingFileNumber(bs.IntervalSecond, 999, t)
+	assertSettingFileNumber(bs.FrequentThresholdHour, 6, t)
 }
 
 // utility functions
@@ -39,4 +40,3 @@ func assertSettingFileNumber(actual int, expect int, t *testing.T) {
 		t.Errorf("設定ファイルの値が異なります。結果:%d,期待:%d", actual, expect)
 	}
 }
-
