@@ -29,8 +29,8 @@ func checkNewReport(bot PoolingAndAlertBot, lastReport earthquake.EarthquakeRepo
 		return lastReport
 	}
 
-	tweetMessage := messageMaker.Message(nowReport)
-	bot.twitter.Tweet(tweetMessage)
+	message := messageMaker.Message(nowReport)
+	bot.twitter.Tweet(message)
 
 	return nowReport
 }
