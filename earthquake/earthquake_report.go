@@ -38,7 +38,7 @@ func (this EarthquakeReport) Same(other EarthquakeReport) bool {
 
 // Utility functions
 
-func convJsonNumberToFloat(number json.Number) float64 {
+func convertJsonNumberToFloat(number json.Number) float64 {
 	value, err := number.Float64()
 	if err != nil {
 		return 0
@@ -57,13 +57,13 @@ func (this EarthquakeReport) Sindo() int {
 }
 
 func (this EarthquakeReport) LatitudeF64() float64 {
-	return convJsonNumberToFloat(this.Latitude)
+	return convertJsonNumberToFloat(this.Latitude)
 }
 
 func (this EarthquakeReport) LongitudeF64() float64 {
-	return convJsonNumberToFloat(this.Longitude)
+	return convertJsonNumberToFloat(this.Longitude)
 }
 
 func (this EarthquakeReport) MagunitudeF64() float64 {
-	return convJsonNumberToFloat(this.Magunitude)
+	return convertJsonNumberToFloat(this.Magunitude)
 }
