@@ -2,6 +2,8 @@ package earthquake
 
 import (
 	"encoding/json"
+	"math"
+	"time"
 )
 
 type EarthquakeReport struct {
@@ -36,6 +38,21 @@ func (this EarthquakeReport) Same(other EarthquakeReport) bool {
 	return this.Report_Id == other.Report_Id
 }
 
+func (this EarthquakeReport) NearAndFrequent(other EarthquakeReport, frequentThresholdHour int) bool {
+	if this.Region_Name != other.Region_Name {
+		return false
+	}
+	myTime := this.reportTime()
+	otherTime := other.reportTime()
+	timeNothing := timeNothing()
+	if myTime.Equal(timeNothing) || otherTime.Equal(timeNothing) {
+		return false
+	}
+	intervalSeconds := math.Abs(myTime.Sub(otherTime).Seconds())
+	frequentThresholdSeconds := toSec(frequentThresholdHour)
+	return intervalSeconds > frequentThresholdSeconds
+}
+
 // Utility functions
 
 func convertJsonNumberToFloat(number json.Number) float64 {
@@ -44,6 +61,14 @@ func convertJsonNumberToFloat(number json.Number) float64 {
 		return 0
 	}
 	return value
+}
+
+func timeNothing() time.Time {
+	return time.Date(1, 1, 1, 0, 0, 0, 0, time.UTC)
+}
+
+func toSec(hours int) float64 {
+	return float64(time.Duration(hours) * time.Minute * time.Hour)
 }
 
 // Custom fields
@@ -66,4 +91,12 @@ func (this EarthquakeReport) LongitudeF64() float64 {
 
 func (this EarthquakeReport) MagunitudeF64() float64 {
 	return convertJsonNumberToFloat(this.Magunitude)
+}
+
+func (this EarthquakeReport) reportTime() time.Time {
+	value, err := time.Parse(this.Request_Time, "2006/01/02 15:04:05")
+	if err == nil {
+		return timeNothing()
+	}
+	return value
 }
