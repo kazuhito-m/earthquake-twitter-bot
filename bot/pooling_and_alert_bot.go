@@ -32,8 +32,15 @@ func checkNewReport(bot PoolingAndAlertBot, lastReport earthquake.EarthquakeRepo
 	message := messageMaker.Message(nowReport)
 	bot.twitter.Tweet(message)
 
+	if nowReport.NearAndFrequent(lastReport, 6) {
+		messageANF := messageMaker.MessageOfNearAndFrequent(nowReport, lastReport)
+		bot.twitter.Tweet(messageANF)
+	}
+
 	return nowReport
 }
+
+
 
 func sleepSecond(second int) {
 	time.Sleep(time.Duration(second) * time.Second)

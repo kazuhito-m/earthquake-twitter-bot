@@ -24,6 +24,10 @@ func (m MessageMaker) Message(report earthquake.EarthquakeReport) string {
 	return message
 }
 
+func (m MessageMaker) MessageOfNearAndFrequent(nowReport earthquake.EarthquakeReport, lastReport earthquake.EarthquakeReport) string {
+	return "同一地域(" + nowReport.Region_Name + ")で地震が頻発している気がします。余震ですかね…気をつけて！"
+}
+
 func CreateMessageMaker(setting config.BotSetting) MessageMaker {
 	return MessageMaker{setting}
 }
