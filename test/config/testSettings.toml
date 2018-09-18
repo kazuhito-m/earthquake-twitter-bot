@@ -7,3 +7,6 @@ consumerKey       = "ck"
 consumerSecret    = "cs"
 accessToken       = "at"
 accessTokenSecret = "ats"
+
+[googleApi]
+apiKey = "gak"

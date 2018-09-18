@@ -7,6 +7,7 @@ import (
 type Settings struct {
 	Twitter TwitterSettings
 	Bot BotSetting
+	GoogleApi GoogleApiSettings
 }
 
 type TwitterSettings struct {
@@ -14,6 +15,10 @@ type TwitterSettings struct {
 	ConsumerSecret string
 	AccessToken string
 	AccessTokenSecret string
+}
+
+type GoogleApiSettings struct {
+	ApiKey string
 }
 
 type BotSetting struct {
