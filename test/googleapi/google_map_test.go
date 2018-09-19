@@ -86,3 +86,21 @@ func TestGoogleMapAPIからJSONのデータを取得して構造体として返�
 		t.Errorf("取得できたMapデータのformatted_addressに期待した地名が含まれていない。期待(含まれて欲しい単語):'%v',結果:'%v'", expect, actual)
 	}
 }
+
+func TestGoogleMapAPIからJSONのデータを取得してデータが無くても構造体として返すことが出来る_例として沖縄本島近海(t *testing.T) {
+	returnJson := test.LoadTestJson("testGoogleMapApiSampleGeoCodeRespons_okinawa.json")
+	client := earthquake.CreateMockClient(returnJson)
+	settings := config.GoogleApiSettings{"ダミーのAPIキー"}
+	sut := googleapi.CreateGoogleMap(client, settings)
+
+	result := sut.GeoCode(34.64, 135)
+
+	if result.Ok() == false {
+		t.Errorf("取得出来たGoogleMapのGeoCodeのAPI成功判定が「成功」となった(失敗期待)。")
+	}
+
+	count := len(result.Results)
+	if count != 0 {
+		t.Errorf("取得できたMapデータのresultsの要素数が期待した個数じゃない。期待:'%v',結果:'%v'", 0, count)
+	}
+}
