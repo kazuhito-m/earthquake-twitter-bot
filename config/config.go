@@ -5,15 +5,15 @@ import (
 )
 
 type Settings struct {
-	Twitter TwitterSettings
-	Bot BotSetting
+	Twitter   TwitterSettings
+	Bot       BotSetting
 	GoogleApi GoogleApiSettings
 }
 
 type TwitterSettings struct {
-	ConsumerKey string
-	ConsumerSecret string
-	AccessToken string
+	ConsumerKey       string
+	ConsumerSecret    string
+	AccessToken       string
 	AccessTokenSecret string
 }
 
@@ -22,7 +22,7 @@ type GoogleApiSettings struct {
 }
 
 type BotSetting struct {
-	IntervalSecond int
+	IntervalSecond        int
 	FrequentThresholdHour int
 }
 
