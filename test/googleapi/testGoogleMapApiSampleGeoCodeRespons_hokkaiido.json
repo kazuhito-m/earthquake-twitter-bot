@@ -1,0 +1,402 @@
+{
+  "plus_code" : {
+    "compound_code" : "R222+22 日本、北海道厚真町",
+    "global_code" : "8RJ4R222+22"
+  },
+  "results" : [
+    {
+      "address_components" : [
+        {
+          "long_name" : "Unnamed Road",
+          "short_name" : "Unnamed Road",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "幌内",
+          "short_name" : "幌内",
+          "types" : [ "political", "sublocality", "sublocality_level_2" ]
+        },
+        {
+          "long_name" : "厚真町",
+          "short_name" : "厚真町",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "勇払郡",
+          "short_name" : "勇払郡",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "059-1616",
+          "short_name" : "059-1616",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "Unnamed Road, 幌内 厚真町 勇払郡 北海道 059-1616 日本",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.8023203,
+            "lng" : 141.9962705
+          },
+          "southwest" : {
+            "lat" : 42.7976451,
+            "lng" : 141.9948157
+          }
+        },
+        "location" : {
+          "lat" : 42.7999827,
+          "lng" : 141.9955431
+        },
+        "location_type" : "GEOMETRIC_CENTER",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.8023203,
+            "lng" : 141.9968920802915
+          },
+          "southwest" : {
+            "lat" : 42.7976451,
+            "lng" : 141.9941941197085
+          }
+        }
+      },
+      "place_id" : "ChIJBcf90_7ldF8R9Mfx8pb9H8Y",
+      "types" : [ "route" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "059-1616",
+          "short_name" : "059-1616",
+          "types" : [ "postal_code" ]
+        },
+        {
+          "long_name" : "幌内",
+          "short_name" : "幌内",
+          "types" : [ "political", "sublocality", "sublocality_level_2" ]
+        },
+        {
+          "long_name" : "厚真町",
+          "short_name" : "厚真町",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "勇払郡",
+          "short_name" : "勇払郡",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本 〒059-1616",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.8740916,
+            "lng" : 142.1122723
+          },
+          "southwest" : {
+            "lat" : 42.6962763,
+            "lng" : 141.9408804
+          }
+        },
+        "location" : {
+          "lat" : 42.8006289,
+          "lng" : 142.037817
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.8740916,
+            "lng" : 142.1122723
+          },
+          "southwest" : {
+            "lat" : 42.6962763,
+            "lng" : 141.9408804
+          }
+        }
+      },
+      "place_id" : "ChIJVyYjDfjkdF8RoYp1rhU9aGQ",
+      "types" : [ "postal_code" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "幌内",
+          "short_name" : "幌内",
+          "types" : [ "political", "sublocality", "sublocality_level_2" ]
+        },
+        {
+          "long_name" : "厚真町",
+          "short_name" : "厚真町",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "勇払郡",
+          "short_name" : "勇払郡",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "059-1616",
+          "short_name" : "059-1616",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "日本、〒059-1616 北海道勇払郡厚真町幌内",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.8740916,
+            "lng" : 142.1122723
+          },
+          "southwest" : {
+            "lat" : 42.6962763,
+            "lng" : 141.9408804
+          }
+        },
+        "location" : {
+          "lat" : 42.7549065,
+          "lng" : 141.9782108
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.8740916,
+            "lng" : 142.1122723
+          },
+          "southwest" : {
+            "lat" : 42.6962763,
+            "lng" : 141.9408804
+          }
+        }
+      },
+      "place_id" : "ChIJr_g2G3DvdF8RIkr-BC-qo2c",
+      "types" : [ "political", "sublocality", "sublocality_level_2" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "厚真町",
+          "short_name" : "厚真町",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "勇払郡",
+          "short_name" : "勇払郡",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本、北海道勇払郡厚真町",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.8740925,
+            "lng" : 142.1122736
+          },
+          "southwest" : {
+            "lat" : 42.5865168,
+            "lng" : 141.7989798
+          }
+        },
+        "location" : {
+          "lat" : 42.7236623,
+          "lng" : 141.877935
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.8740925,
+            "lng" : 142.1122736
+          },
+          "southwest" : {
+            "lat" : 42.5865168,
+            "lng" : 141.7989798
+          }
+        }
+      },
+      "place_id" : "ChIJQYl0tGHjdF8RiIqjpKbb-O8",
+      "types" : [ "locality", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "勇払郡",
+          "short_name" : "勇払郡",
+          "types" : [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本、北海道勇払郡",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 43.1332254,
+            "lng" : 142.7275479
+          },
+          "southwest" : {
+            "lat" : 42.5287314,
+            "lng" : 141.7366132
+          }
+        },
+        "location" : {
+          "lat" : 42.8335491,
+          "lng" : 142.1757111
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 43.1332254,
+            "lng" : 142.7275479
+          },
+          "southwest" : {
+            "lat" : 42.5287314,
+            "lng" : 141.7366132
+          }
+        }
+      },
+      "place_id" : "ChIJt7-yYUbtdF8RcRX4McAN-qE",
+      "types" : [ "administrative_area_level_2", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "北海道",
+          "short_name" : "北海道",
+          "types" : [
+            "administrative_area_level_1",
+            "establishment",
+            "natural_feature",
+            "political"
+          ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本、北海道",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 45.5230219,
+            "lng" : 145.8175506
+          },
+          "southwest" : {
+            "lat" : 41.3521284,
+            "lng" : 139.3342995
+          }
+        },
+        "location" : {
+          "lat" : 43.06461470000001,
+          "lng" : 141.3468074
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 45.5230219,
+            "lng" : 145.8175506
+          },
+          "southwest" : {
+            "lat" : 41.3521284,
+            "lng" : 139.3342995
+          }
+        }
+      },
+      "place_id" : "ChIJi4hsnyBZn18RjwPOT1bDPBw",
+      "types" : [
+        "administrative_area_level_1",
+        "establishment",
+        "natural_feature",
+        "political"
+      ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 45.6412626,
+            "lng" : 154.0031455
+          },
+          "southwest" : {
+            "lat" : 20.3585295,
+            "lng" : 122.8554688
+          }
+        },
+        "location" : {
+          "lat" : 36.204824,
+          "lng" : 138.252924
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 45.6412626,
+            "lng" : 154.0031455
+          },
+          "southwest" : {
+            "lat" : 20.3585295,
+            "lng" : 122.8554688
+          }
+        }
+      },
+      "place_id" : "ChIJLxl_1w9OZzQRRFJmfNR1QvU",
+      "types" : [ "country", "political" ]
+    }
+  ],
+  "status" : "OK"
+}
