@@ -1,0 +1,122 @@
+{
+  "plus_code" : {
+    "compound_code" : "J2R2+22 日本、兵庫県明石市",
+    "global_code" : "8Q6QJ2R2+22"
+  },
+  "results" : [
+    {
+      "address_components" : [
+        {
+          "long_name" : "Unnamed Road",
+          "short_name" : "Unnamed Road",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "４",
+          "short_name" : "４",
+          "types" : [ "political", "sublocality", "sublocality_level_4" ]
+        },
+        {
+          "long_name" : "１丁目",
+          "short_name" : "１丁目",
+          "types" : [ "political", "sublocality", "sublocality_level_3" ]
+        },
+        {
+          "long_name" : "中崎",
+          "short_name" : "中崎",
+          "types" : [ "political", "sublocality", "sublocality_level_2" ]
+        },
+        {
+          "long_name" : "明石市",
+          "short_name" : "明石市",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "兵庫県",
+          "short_name" : "兵庫県",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        },
+        {
+          "long_name" : "673-0883",
+          "short_name" : "673-0883",
+          "types" : [ "postal_code" ]
+        }
+      ],
+      "formatted_address" : "Unnamed Road, １丁目-４ 中崎 明石市 兵庫県 673-0883 日本",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 34.6427094,
+            "lng" : 135.0008503
+          },
+          "southwest" : {
+            "lat" : 34.642272,
+            "lng" : 134.9981572
+          }
+        },
+        "location" : {
+          "lat" : 34.6424907,
+          "lng" : 134.9995037
+        },
+        "location_type" : "GEOMETRIC_CENTER",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 34.6438396802915,
+            "lng" : 135.0008527302915
+          },
+          "southwest" : {
+            "lat" : 34.6411417197085,
+            "lng" : 134.9981547697085
+          }
+        }
+      },
+      "place_id" : "ChIJpaBBYLPUVDUROAk3jCm2580",
+      "types" : [ "route" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "日本",
+          "short_name" : "JP",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "日本",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 45.6412626,
+            "lng" : 154.0031455
+          },
+          "southwest" : {
+            "lat" : 20.3585295,
+            "lng" : 122.8554688
+          }
+        },
+        "location" : {
+          "lat" : 36.204824,
+          "lng" : 138.252924
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 45.6412626,
+            "lng" : 154.0031455
+          },
+          "southwest" : {
+            "lat" : 20.3585295,
+            "lng" : 122.8554688
+          }
+        }
+      },
+      "place_id" : "ChIJLxl_1w9OZzQRRFJmfNR1QvU",
+      "types" : [ "country", "political" ]
+    }
+  ],
+  "status" : "OK"
+}

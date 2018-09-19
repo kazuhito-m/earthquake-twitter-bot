@@ -22,3 +22,7 @@ func ParseJsonOf(jsonText string) GeoCode {
 	json.Unmarshal(jsonBytes, &geoCode)
 	return geoCode
 }
+
+func (gc GeoCode) Ok() bool {
+	return gc.Status == "OK"
+}
