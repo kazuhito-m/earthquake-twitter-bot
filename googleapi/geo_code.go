@@ -26,3 +26,26 @@ func ParseJsonOf(jsonText string) GeoCode {
 func (gc GeoCode) Ok() bool {
 	return gc.Status == "OK"
 }
+
+func (gc GeoCode) MajorPlacesIncludingPrefectureName() []string {
+	texts := []string{}
+	texts = append(texts, gc.Plus_Code.Compound_Code)
+	for _, result := range gc.Results {
+		for _, addressComponent := range result.Address_Components {
+			if contains(addressComponent.Types, "administrative_area_level_1") {
+				texts = append(texts, addressComponent.Long_Name)
+			}
+		}
+		texts = append(texts, result.Formatted_Address)
+	}
+	return texts
+}
+
+func contains(texts []string, text string) bool {
+	for _, v := range texts {
+		if text == v {
+			return true
+		}
+	}
+	return false
+}
