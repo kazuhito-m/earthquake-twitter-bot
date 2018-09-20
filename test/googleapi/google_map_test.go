@@ -95,7 +95,7 @@ func TestGoogleMapAPIからJSONのデータを取得してデータが無くて�
 
 	result := sut.GeoCode(34.64, 135)
 
-	if result.Ok() == false {
+	if result.Ok() {
 		t.Errorf("取得出来たGoogleMapのGeoCodeのAPI成功判定が「成功」となった(失敗期待)。")
 	}
 
