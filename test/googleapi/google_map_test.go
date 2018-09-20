@@ -1,16 +1,17 @@
 package googleapi
 
 import (
+	"strings"
+	"testing"
+
 	"github.com/kazuhito-m/earthquake-twitter-bot/config"
 	"github.com/kazuhito-m/earthquake-twitter-bot/googleapi"
 	"github.com/kazuhito-m/earthquake-twitter-bot/test"
 	"github.com/kazuhito-m/earthquake-twitter-bot/test/earthquake"
-	"strings"
-	"testing"
 )
 
 func TestパラメータからAPIのURLを組み立てることが出来る(t *testing.T) {
-	settings := config.GoogleApiSettings{"AbCxYz"}
+	settings := config.GoogleApiSettings{ApiKey: "AbCxYz"}
 
 	actual := googleapi.CreateUrl(123.456, 987.654, settings)
 
@@ -25,7 +26,7 @@ func TestパラメータからAPIのURLを組み立てることが出来る(t *t
 func TestGoogleMapAPIからJSONのデータを取得して構造体として返すことが出来る_例として日本標準時の明石天文台(t *testing.T) {
 	returnJson := test.LoadTestJson("testGoogleMapApiSampleGeoCodeRespons_akashi.json")
 	client := earthquake.CreateMockClient(returnJson)
-	settings := config.GoogleApiSettings{"ダミーのAPIキー"}
+	settings := config.GoogleApiSettings{ApiKey: "ダミーのAPIキー"}
 	sut := googleapi.CreateGoogleMap(client, settings)
 
 	result := sut.GeoCode(34.64, 135)
@@ -55,7 +56,7 @@ func TestGoogleMapAPIからJSONのデータを取得して構造体として返�
 func TestGoogleMapAPIからJSONのデータを取得して構造体として返すことが出来る_例として胆振地方中東部(t *testing.T) {
 	returnJson := test.LoadTestJson("testGoogleMapApiSampleGeoCodeRespons_hokkaiido.json")
 	client := earthquake.CreateMockClient(returnJson)
-	settings := config.GoogleApiSettings{"ダミーのAPIキー"}
+	settings := config.GoogleApiSettings{ApiKey: "ダミーのAPIキー"}
 	sut := googleapi.CreateGoogleMap(client, settings)
 
 	result := sut.GeoCode(34.64, 135)
@@ -90,7 +91,7 @@ func TestGoogleMapAPIからJSONのデータを取得して構造体として返�
 func TestGoogleMapAPIからJSONのデータを取得してデータが無くても構造体として返すことが出来る_例として沖縄本島近海(t *testing.T) {
 	returnJson := test.LoadTestJson("testGoogleMapApiSampleGeoCodeRespons_okinawa.json")
 	client := earthquake.CreateMockClient(returnJson)
-	settings := config.GoogleApiSettings{"ダミーのAPIキー"}
+	settings := config.GoogleApiSettings{ApiKey: "ダミーのAPIキー"}
 	sut := googleapi.CreateGoogleMap(client, settings)
 
 	result := sut.GeoCode(34.64, 135)
