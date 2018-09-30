@@ -25,6 +25,8 @@ func Test設定ファイルtomlを読んで値が読める(t *testing.T) {
 	assertSettingFileValue(ts.ConsumerSecret, "cs", t)
 	assertSettingFileValue(ts.AccessToken, "at", t)
 	assertSettingFileValue(ts.AccessTokenSecret, "ats", t)
+	gas := result.GoogleApi
+	assertSettingFileValue(gas.ApiKey, "gak", t)
 }
 
 // utility functions

@@ -7,3 +7,6 @@ consumerKey       = ""
 consumerSecret    = ""
 accessToken       = ""
 accessTokenSecret = ""
+
+[googleApi]
+apiKey = ""

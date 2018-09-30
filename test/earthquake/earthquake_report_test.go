@@ -2,14 +2,12 @@ package earthquake
 
 import (
 	"github.com/kazuhito-m/earthquake-twitter-bot/earthquake"
-	"io/ioutil"
-	"os"
-	"path"
+	"github.com/kazuhito-m/earthquake-twitter-bot/test"
 	"testing"
 )
 
 func Test地震発生時の地震データJSONテキストを構造体に変換出来る(t *testing.T) {
-	jsonText := loadTestJson("testEarthquakeReportRise.json")
+	jsonText := test.LoadTestJson("testEarthquakeReportRise.json")
 
 	actual := earthquake.ParseJsonOf(jsonText)
 
@@ -29,7 +27,7 @@ func Test地震発生時の地震データJSONテキストを構造体に変換�
 }
 
 func Test空データ時の地震データJSONテキストを構造体に変換出来る(t *testing.T) {
-	jsonText := loadTestJson("testEarthquakeReportEmpty.json")
+	jsonText := test.LoadTestJson("testEarthquakeReportEmpty.json")
 
 	actual := earthquake.ParseJsonOf(jsonText)
 
@@ -78,17 +76,6 @@ func Test地震データが同じか否かをは判定出来る(t *testing.T) {
 }
 
 // utility functions
-
-func createTestFilePath(fileName string) string {
-	testDirPath, _ := os.Getwd()
-	return path.Join(testDirPath, fileName)
-}
-
-func loadTestJson(fileName string) string {
-	filePath := createTestFilePath(fileName)
-	contents, _ := ioutil.ReadFile(filePath)
-	return string(contents);
-}
 
 func assertJsonValue(actual string, expect string, t *testing.T) {
 	if actual != expect {
